@@ -3,12 +3,12 @@ entries:
   logrotate:
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2021-02-03T23:23:25.438691+07:00"
+    created: "2021-02-04T00:05:13.882947+07:00"
     description: A Helm chart for logrotate
-    digest: a5e387cd486d7ef1dc13618afe069d3917e06d0dd673050a5366c9da6d65e62a
+    digest: bd9ab4570ebe77c2cea049c0ce2c9e3a2a858309abd2c5d704b3fdda475f04e4
     name: logrotate
     type: application
     urls:
     - https://kubeopsskills.github.io/logrotate/logrotate-0.0.1.tgz
     version: 0.0.1
-generated: "2021-02-03T23:23:25.438133+07:00"
+generated: "2021-02-04T00:05:13.882439+07:00"
