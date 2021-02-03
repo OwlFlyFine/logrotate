@@ -424,13 +424,11 @@ $ docker run -d \
 
 ## Used in Kubernetes
 
-When we run container in Kubernetes, we can use the logrotate container to rotate the logs. As we create
-
-an DaemonSet in cluster ,we can deploy an logrotate container in every nodes of the cluster.
+When we run container in Kubernetes, we can use the logrotate container to rotate the logs. As we create an DaemonSet in cluster ,we can deploy an logrotate container in every nodes of the cluster.
 
 ```sh
-# kubectl create -f logrotate_ds.yaml
-daemonset "logrotate" created
+helm repo add kubeopsskills https://kubeopsskills.github.io/logrotate
+helm install logrotate kubeopsskills/logrotate -n logging --version 0.0.1
 ```
 
 ## References
