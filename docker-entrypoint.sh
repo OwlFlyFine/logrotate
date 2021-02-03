@@ -32,6 +32,7 @@ logrotate_cronlog=""
 
 if [ -n "${LOGROTATE_LOGFILE}" ] && [ -z "${SYSLOGGER}"]; then
   logrotate_cronlog=" 2>&1 | tee -a "${LOGROTATE_LOGFILE}
+  ln -sf /dev/stdout ${LOGROTATE_LOGFILE}
 else
   if [ -n "${SYSLOGGER}" ]; then
     logrotate_cronlog=" 2>&1 | "${syslogger_command}

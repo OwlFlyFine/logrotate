@@ -1,8 +1,9 @@
-FROM blacklabelops/alpine:3.8
-MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
+FROM alpine:3.13.1
 
-# logrotate version (e.g. 3.9.1-r0)
-ARG LOGROTATE_VERSION=latest
+LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>, KubeOps Skills <support@kubeops.guru>"
+
+# logrotate version (e.g. 3.18.0-r0)
+ARG LOGROTATE_VERSION=3.18.0-r0
 # permissions
 ARG CONTAINER_UID=1000
 ARG CONTAINER_GID=1000
@@ -13,6 +14,9 @@ RUN export CONTAINER_USER=logrotate && \
     addgroup -g $CONTAINER_GID logrotate && \
     adduser -u $CONTAINER_UID -G logrotate -h /usr/bin/logrotate.d -s /bin/bash -S logrotate && \
     apk add --update \
+      bash \
+      tzdata \
+      tini \
       tar \
       gzip \
       wget \
