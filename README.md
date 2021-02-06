@@ -436,4 +436,4 @@ $ helm install logrotate kubeopsskills/logrotate -n logging --version 0.0.1
 
 * [Logrotate](https://linux.die.net/man/8/logrotate)
 * [Docker Homepage](https://www.docker.com/)
-* [Docker Userguide](https://docs.docker.com/userguide/)
+* [Docker Userguide](https://docs.docker.com/get-started/overview/)
